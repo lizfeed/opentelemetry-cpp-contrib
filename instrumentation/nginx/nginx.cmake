@@ -1,5 +1,6 @@
 include(ExternalProject)
 
+if (NOT NGINX_DIR)
 if (NOT NGINX_VERSION)
   find_program(NGINX_BIN nginx REQUIRED)
   execute_process(COMMAND ${NGINX_BIN} -v
@@ -33,6 +34,7 @@ ExternalProject_Add(project_nginx
 )
 
 set(NGINX_DIR "${CMAKE_BINARY_DIR}/nginx/src/project_nginx")
+endif()
 
 set(NGINX_INCLUDE_DIRS
   ${NGINX_DIR}/objs

@@ -7,6 +7,7 @@ find_package(Threads REQUIRED)
 find_package(Protobuf REQUIRED)
 find_package(gRPC REQUIRED)
 find_package(CURL REQUIRED)
+find_package(nlohmann_json REQUIRED)
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/nginx.cmake)
 
